@@ -3,5 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: rgb(160, 194, 244);
+  min-height: 100dvh;
 }
 
