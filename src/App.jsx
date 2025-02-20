@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 
 const OTP_STATUS = {
@@ -98,10 +98,10 @@ function App() {
   };
 
   return (
-    <div className=" w-md bg-emerald-600 place-self-center p-2 rounded-md min-h-[50vh]">
-      <h2 className=" font-semibold">OTP Verification</h2>
+    <div className=" min-w-full min-h-full lg:w-md lg:min-w-[50vw] bg-slate-900 place-self-center p-2 rounded-md lg:min-h-[60vh]">
+      <h2 className=" font-semibold my-3">OTP Verification</h2>
       <button
-        className=" m-2 p-1 rounded-md bg-blue-400"
+        className=" m-2 p-1 rounded-md bg-blue-400 mb-4"
         onClick={handleGenrarteOtp}
         type="button"
       >
@@ -113,7 +113,7 @@ function App() {
             <input
               id={`focus-${index}`}
               key={item.name}
-              className=" bg-slate-300 text-slate-950 m-2 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]::appearance-none  [-moz-appearance: textfield] rounded-sm text-center outline-0"
+              className=" h-10 bg-slate-300 text-slate-950 m-2 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]::appearance-none  [-moz-appearance: textfield] rounded-sm text-center outline-0"
               name={item.name}
               value={item.digit}
               type="number"
@@ -132,7 +132,7 @@ function App() {
         <span
           className={` ${
             otpStatus && "p-1"
-          } bg-slate-100 text-black  w-fit place-self-center rounded-sm`}
+          } bg-slate-100 text-black my-4  w-fit place-self-center rounded-sm`}
         >
           {otpStatus}
         </span>
